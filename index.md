@@ -39,6 +39,8 @@ to be shared can and should be stored in a version control system.
 > ## Prerequisites
 >
 > No previous experience is required, although
-> we discuss files used previously in the Data Carpentry
-> Ecology Data Organization and Open Refine lessons.
+> some experience with the command line is recommended
+> for anyone planning on trying Git through a terminal.
 {: .prereq}
+
+We also recommend taking a look at the [Library Carpentry description of Git/GitHub](https://librarycarpentry.org/lc-git/01-what-is-git/) for some background.
