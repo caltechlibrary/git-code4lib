@@ -31,6 +31,8 @@ the Git version control system is that you set a name and email address.
 These will be included with the history of changes made to a repository.
 
 > ## CLI Steps
+> https://swcarpentry.github.io/git-novice/02-setup/
+>
 > When we use Git on a new computer for the first time,
 > we need to configure a few things. Below are a few examples
 > of configurations we can set as we get started with Git:
