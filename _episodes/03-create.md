@@ -13,13 +13,11 @@ keypoints:
 Once Git is configured,
 we can start using it.
 
-Let's create a new repository for our work.  In this lesson we're going to be adding additional information
-to the survey_data_clean.csv file we worked on in the "Data Organization" part of the workshop. Click 
-"Create new repository".  
+Let's create a new repository for our work. Click "Create new repository".  
 
 ![welcome](../fig/GitDesktop4.PNG)
 
-Then we give our repository a name - in this case `survey_data`.  
+Then we give our repository a name - in this case `hello-world`.  
 We also choose the location to put the repository on our local computer.  For this workshop it's easier to
 put the repository on your desktop.  It's also good practice to check the README box, which will create a blank
 file where we can put information about our content.  We'll discuss Git ignore (which handles files
@@ -37,9 +35,9 @@ You'll now see that GitHub Desktop shows the status of your repository.  You hav
 so no changes show up.
 
 > ## Advanced tip
-> If you navigate to the `survey_data` directory on the command line
+> If you navigate to the `hello-world` directory on the command line
 > and use `ls -a` flag to show everything,
-> we can see that Git has created a hidden directory within `survey_data` called `.git`:
+> we can see that Git has created a hidden directory within `hello-world` called `.git`:
 > 
 > ~~~
 > $ ls -a
@@ -59,7 +57,7 @@ so no changes show up.
 
 > ## Places to Create Git Repositories
 >
-> Try to create a new git repository inside of the `survey_data` repository you just created.
+> Try to create a new git repository inside of the `hello-world` repository you just created.
 > Since you don't have the welcome screen any more, you'll need to go to File/New Repository.
 >
 > What happens?  Can you create the sub-repository? Why is it a bad idea to do this? 
