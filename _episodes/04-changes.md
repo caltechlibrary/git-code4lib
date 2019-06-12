@@ -14,17 +14,167 @@ keypoints:
 - "Always write a log message when committing changes."
 ---
 
-You should now have a `survey_data` repository on your desktop.
+You should now have a `hello-world` repository on your desktop.
 
-Drag `survey_data_cleaned.csv`, which was the end result of the Data Organization lesson.
+Let’s create a file and add it to the repository.
 
-You can also download this file [here](https://raw.githubusercontent.com/caltechlibrary/git-desktop/gh-pages/data/survey_data_cleaned.csv)
+> ## CLI Steps
+> [https://swcarpentry.github.io/git-novice/04-changes/](https://swcarpentry.github.io/git-novice/04-changes/)
+>
+> This is a two-stage process. First, we **add** any files for which
+> we want to save the changes to a staging area,
+> then we **commit** those changes to the repository.
+> This two-stage process gives us fine-grained control over what should
+> and should not be included in a particular commit.
+>
+> Let's create a new file using the `touch` command, which is a quick way to create an empty file.
+> 
+> ~~~
+> $ touch index.md
+> ~~~
+> {: .bash}
+> 
+> The `.md` extension above signifies that we have chosen to use the Markdown format,
+> a lightweight markup language with plain text formatting syntax.
+> We will explore Markdown a bit later.
+> 
+> Let's check the status of our project.
+> 
+> ~~~
+> $ git status
+> ~~~
+> {: .bash}
+> ~~~
+> On branch master
+> No commits yet
+> Untracked files:
+>   (use "git add <file>..." to include in what will be committed)
+> 
+>     index.md
+> 
+> nothing added to commit but untracked files present (use "git add" to track)
+> ~~~
+> {: .output}
+> 
+> This status is telling us that git has noticed a new file in our directory that
+> we are not yet tracking.
+> With colorised output, the filename will appear in red.
+> To change this, and to tell Git we want to track any changes we make to index.md, we use `git add`.
+> 
+> ~~~
+> $ git add index.md
+> ~~~
+> {: .bash}
+> 
+> This adds our Markdown file to the **staging area** (the area where git checks for file changes).
+> To confirm this we want to use `git status` again.
+> 
+> ~~~
+> $ git status
+> ~~~
+> {: .bash}
+> ~~~
+> On branch master
+> 
+> No commits yet
+> 
+> Changes to be committed:
+>   (use "git rm --cached <file>..." to unstage)
+> 
+>     new file:   index.md
+> ~~~
+> {: .output}
+> 
+> If we are using colorised output, we will see that the filename has changed color
+> (from red to green). Git also tells us that there is a new file to be committed,
+> but, before we do that, let's add some text to the file.
+> 
+> We will edit the file `index.md` with the nano text editor on the command line.
+> 
+> ~~~
+> $ nano index.md
+> ~~~
+> {: .bash}
+> 
+> Type `# Hello, world!` into the file. Then press Control-O to save
+> and then Control-X to exit nano.
+> 
+> Now, let’s check if Git has spotted the changes.
+> 
+> ~~~
+> $ git status
+> ~~~
+> {: .bash}
+> ~~~
+> On branch master
+> 
+> No commits yet
+> 
+> Changes to be committed:
+>  (use "git rm --cached <file>..." to unstage)
+> 
+>  new file:   index.md
+> 
+> Changes not staged for commit:
+>  (use "git add <file>..." to update what will be committed)
+>  (use "git checkout -- <file>..." to discard changes in working directory)
+> 
+>  modified:   index.md
+> ~~~
+> {: .output}
+> 
+> This lets us know that git has indeed spotted the changes to our file,
+> but that it hasn't yet staged them,
+> so let's add the new version of the file to the staging area.
+> 
+> ~~~
+> $ git add index.md
+> ~~~
+> {: .bash}
+{: .solution}
 
-You'll see that GitHub Desktop has changed to signify that a new file has been added. The left hand panel, which shows changes that have occurred in the repository, lists the new file.  It knows this is a new file that it will have to add to the repository, as indicated by the green plus sign.  In addition, contents of the file applear in green in the right hand panel, which provides details about the changes.  
+Open a plain text editor (typically Notepad on Windows or TextEdit on macOS) and save an empty file named `index.md` in the `hello-world` directory.
+
+You'll see that GitHub Desktop has changed to signify that a new file has been added. The left hand panel, which shows changes that have occurred in the repository, lists the new file.  It knows this is a new file that it will have to add to the repository, as indicated by the green plus sign.
 
 ![new file](../fig/GitDesktopChanges1.png)
 
-In order to save this version of the file, we need to commit our changes. To do this we need to write a commit message that describes our changes.  You can provide both a short summary of the changes and a longer description by typing in the lower left hand corner of GitHub Desktop. Then click Commit to master.   
+Edit the file again and add the text `# Hello, world!` on the first line. Save the file and then check that contents of the file appear in green in the right hand panel of Git Desktop, showing the lines that have changed.
+
+To finalize saving this version of the file in the repository we need to write a commit message that describes our changes and commit the changes.
+
+> ## CLI Steps
+> Now we are ready to  **commit** our first changes.
+> Commit is similar to 'saving' a file to Git.
+> However, compared to saving, a commit provides a lot more information about the changes we have made,
+> and this information will remain visible to us later.
+> 
+> ~~~
+> $ git commit -m 'Add index.md'
+> ~~~
+> {: .bash}
+> ~~~
+> [master (root-commit) e9e8fd3] Add index.md
+>  1 file changed, 1 insertion(+)
+>  create mode 100644 index.md
+> ~~~
+> {: .output}
+> 
+> We can see that one file has changed and that we made one insertion,
+> which was a line with the text '# Hello, world!'.
+> We can also see the commit message 'Add index.md',
+> which we added by using the `-m` flag after `git commit`.
+> The commit message is used to record a short, descriptive, and specific summary
+> of what we did to help us remember later on without having to look at the actual changes.
+> If we just run `git commit` without the `-m` option, Git will launch nano
+> (or whatever other editor we configured as `core.editor`)
+> so that we can write a longer message.
+> 
+> Having made a commit, we now have a permanent record of what was changed,
+> along with metadata about who made the commit and at what time.
+{: .solution}
+
+You can provide both a short summary of the changes and a longer description by typing in the lower left hand corner of GitHub Desktop. Then click Commit to master.
 
 ![commit](../fig/GitDesktopChanges2.png)
 
