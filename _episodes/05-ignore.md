@@ -17,6 +17,55 @@ What if we have files that we do not want Git to track for us,
 like backup files created by our editor
 or intermediate files created during data analysis.
 
+> ## CLI Steps
+> We do this by creating a file in the root directory of our project called `.gitignore`:
+> 
+> ~~~
+> $ nano .gitignore
+> $ cat .gitignore
+> ~~~
+> {: .language-bash}
+> 
+> ~~~
+> .DS_Store
+> ~~~
+> {: .output}
+> 
+> These patterns tell Git to ignore any file whose name is `.DS_Store` (a common
+> hidden file created on macOS).
+> 
+> Once we have created this file, we can add it to repository so that we never
+> even see these distracting files.
+> 
+> ~~~
+> $ git status
+> ~~~
+> {: .language-bash}
+> 
+> ~~~
+> On branch master
+> Untracked files:
+>   (use "git add <file>..." to include in what will be committed)
+> 
+> 	.gitignore
+> 
+> nothing added to commit but untracked files present (use "git add" to track)
+> ~~~
+> {: .output}
+> 
+> You might think we wouldn't want to track the `.gitignore` file,
+> but everyone we're sharing our repository with will probably want to ignore
+> the same things that we're ignoring.
+> Let's add and commit `.gitignore`:
+> 
+> ~~~
+> $ git add .gitignore
+> $ git commit -m "Ignore .DS_Store files."
+> $ git status
+> ~~~
+> {: .language-bash}
+{: .solution}
+
 To ignore files in your repository with GitHub Desktop go to the Repository menu
 and select Repository Settings…
 
