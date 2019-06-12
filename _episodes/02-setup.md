@@ -30,7 +30,7 @@ Next, we'll set our name and email address for Git.  A requirement of
 the Git version control system is that you set a name and email address.
 These will be included with the history of changes made to a repository.
 
-> ##
+> 
 > > ## CLI Steps
 > > When we use Git on a new computer for the first time,
 > > we need to configure a few things. Below are a few examples
