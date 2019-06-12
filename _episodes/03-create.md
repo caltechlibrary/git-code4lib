@@ -10,10 +10,41 @@ keypoints:
 - "Local repositories can be set up and track changes in files."
 ---
 
-Once Git is configured,
-we can start using it.
+Once Git is configured, we can start using it.
 
-Let's create a new repository for our work. Click "Create new repository".  
+Let's create a new repository for our work. A Git **repository** is
+a data structure used to track changes to a set of project files over time.
+Repositories are stored within the same directory as these project files,
+in a hidden directory called `.git`, which we don’t need to be concerned with right now.
+Click "Create new repository".  
+
+> ## CLI Steps
+> https://swcarpentry.github.io/git-novice/03-create/
+>
+> First, we will create a new directory for our project and enter that directory.
+> <!explain commands as we go along>
+> 
+> ~~~
+> $ mkdir hello-world
+> $ cd hello-world
+> ~~~
+> {: .bash}
+> 
+> We will now create an empty git repository to track changes to our project. To do this we will use the git **init** command, 
+> which is simply short for *initialise*.
+> 
+> ~~~
+> $ git init
+> ~~~
+> {: .bash}
+> ~~~
+> Initialized empty Git repository in <your file path>/hello-world/.git/
+> ~~~
+> {: .output}
+> 
+> The `hello-world` directory is now a git repository.  
+{: .solution}
+
 
 ![welcome](../fig/GitDesktop4.PNG)
 
