@@ -30,6 +30,34 @@ Next, we'll set our name and email address for Git.  A requirement of
 the Git version control system is that you set a name and email address.
 These will be included with the history of changes made to a repository.
 
+> ##
+> > ## CLI Steps
+> > When we use Git on a new computer for the first time,
+> > we need to configure a few things. Below are a few examples
+> > of configurations we will set as we get started with Git:
+> > 
+> > *   our name and email address,
+> > *   what our preferred text editor is,
+> > *   and that we want to use these settings globally (i.e. for every project).
+> > 
+> > On a command line, Git commands are written as `git verb options`,
+> > where `verb` is what we actually want to do and `options` is additional optional information which may be needed for the `verb`. So here is how
+> > Dracula sets up his new laptop:
+> > 
+> > ~~~
+> > $ git config --global user.name "Vlad Dracula"
+> > $ git config --global user.email "vlad@tran.sylvan.ia"
+> > ~~~
+> > {: .language-bash}
+> > 
+> > Please use your own name and email address instead of Dracula's. This user name and email will be associated with your subsequent Git activity,
+> > which means that any changes pushed to
+> > [GitHub](https://github.com/) or
+> > another Git host server
+> > in a later lesson will include this information. 
+> {: .solution}
+{: .challenge}
+
 ![welcome](../fig/GitDesktop3.PNG)
 
 While this name and email doesn't need to be the same as the one in your
