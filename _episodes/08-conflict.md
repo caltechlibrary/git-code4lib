@@ -22,6 +22,11 @@ different changes to each copy.  Version control helps us manage these
 To see how we can resolve conflicts, we must first create one. Have one partner
 make a change to the README.md file and push the change to GitHub.
 
+> ## CLI Steps
+> [https://swcarpentry.github.io/git-novice/09-conflict/](https://swcarpentry.github.io/git-novice/09-conflict/)
+{: .solution}
+
+
 ![Changes on GitHub](../fig/GitDesktopConflict1.png)
 
 Now have the other partner make a different change to their copy *without*
