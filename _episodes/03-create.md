@@ -16,7 +16,7 @@ Let's create a new repository for our work. A Git **repository** is
 a data structure used to track changes to a set of project files over time.
 Repositories are stored within the same directory as these project files,
 in a hidden directory called `.git`, which we don’t need to be concerned with right now.
-Click "Create new repository".  
+Click "Create new repository on your Hard Drive".  
 
 > ## CLI Steps
 > https://swcarpentry.github.io/git-novice/03-create/
@@ -45,21 +45,21 @@ Click "Create new repository".
 > The `hello-world` directory is now a git repository.  
 {: .solution}
 
+![welcome](../fig/GitDesktop4.png)
 
-![welcome](../fig/GitDesktop4.PNG)
-
-Then we give our repository a name - in this case `hello-world`.  
+Then we give our repository a name - in this case `hello-world`.  You can also
+provide a short description that will show up on GitHub.com later.
 We also choose the location to put the repository on our local computer.  For this workshop it's easier to
 put the repository on your desktop.  It's also good practice to check the README box, which will create a blank
 file where we can put information about our content.  We'll discuss Git ignore (which handles files
 you don't want tracked) later in the workshop, and the License section is a discussion for another workshop.  
 
-![welcome](../fig/GitDesktop6.PNG)
+![welcome](../fig/GitDesktop5.png)
 
 If you look on your desktop you'll see a new folder.  This is your new repository, which is just like any other
 folder on your computer.  However, it is also special because Git can now track versions of your files.
 
-![welcome](../fig/GitDesktop7.PNG)
+![welcome](../fig/GitDesktop6.png)
 
 
 You'll now see that GitHub Desktop shows the status of your repository.  You haven't added anything yet,

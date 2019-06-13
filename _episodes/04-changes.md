@@ -184,21 +184,32 @@ and stores a copy permanently inside the special `.git` directory.
 This permanent copy is called a [commit]({{ page.root }}/reference/#commit)
 (or [revision]({{ page.root }}/reference/#revision)) and is assigned a identifier.  
 
-If you click the History tab you'll see a record of the changes you have made.  The "Initial commit' was generated automatically when you requested a README file to be added to the repository, and at the top you'll see the commit we made with the summary "Initial file".  More details are listed on the right hand side, including the description and a short version identifier for the commit (7118513 in the example - yours will be different). 
+If you click the History tab you'll see a record of the changes you have made.  
+The "Initial commit' was generated automatically when you requested a README file 
+to be added to the repository, and at the top you'll see the commit we made with 
+the summary "Initial file".  More details are listed on the right hand side, including 
+the description and a short version identifier for the commit (288e33a in the example - yours will be different). 
 
 ![history](../fig/GitDesktopChanges3.png)
 
 > ## Where Are My Changes?
-> If we look in our directory at this point, we will still see just one file called `survey_data_cleaned.csv`.
+> If we look in our directory at this point, we will still see just the files
+> `README.md` and `index.md`.
 > That's because Git saves information about files' history
 > in the special `.git` directory mentioned earlier
 > so that our filesystem doesn't become cluttered
 > (and so that we can't accidentally edit or delete an old version).
 {: .callout}
 
-Now let's open up our data file in a spreadsheet program.  In reality you'll want to make most changes to data files using code (we'll talk about this tomorrow), but for now we're going to manually make changes to see how things work.  Some of the fields in the data file don't have weights.  Let's add a some text in the first note field that the scale was broken.  Save the file (Because you're working with a csv file Excel may complain.  Make sure that your data file is still saved as a csv).
+Now, open up your text editor and change the first line in `index.md` to 
+`# Hello, world, Hello!`.  Save the modified file
 
-When we switch back to GitHub Desktop, we see that something has happened in Changes tab.  Our data file appears in the left hand panel with a yellow star, which signifies that this file has been changed.  In the right hand panel we can see that one line in our .csv file, shown in green, has been added (it includes the "scale broken" note).  It also shows that the line without the note has been removed, shown in red.  If we write a commit message these changes will be saved in our history.
+When we switch back to GitHub Desktop, we see that something has happened in
+Changes tab.  index.md appears in the left hand panel with a yellow icon, which 
+signifies that this file has been changed.  In the right hand panel we can see 
+the new index.md header, shown in green, has been addeed.  It also shows that the 
+old header without the extra `Hello`, shown in red, has been removed.  
+If we write a commit message these changes will be saved in our history.
 
 ![new_change](../fig/GitDesktopChanges4.png)
 
