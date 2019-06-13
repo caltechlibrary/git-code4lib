@@ -25,6 +25,12 @@ services like [GitHub](https://github.com), [BitBucket](https://bitbucket.org) o
 [GitLab](https://gitlab.com/) to hold those master copies. Since we are using the
 GitHub Desktop software for this workshop, we'll be using the GitHub service.
 
+
+> ## CLI Steps
+> [https://swcarpentry.github.io/git-novice/07-github/](https://swcarpentry.github.io/git-novice/07-github/)
+{: .solution}
+
+
 Let's start by sharing the changes we've made to our current project with the
 world. From the GitHub Desktop window, simply click the Publish Repository tab
 at the top.
