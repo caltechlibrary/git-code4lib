@@ -26,6 +26,12 @@ To accept access to the Owner's repo, the Collaborator
 needs to go to [https://github.com/notifications](https://github.com/notifications).
 Once there she can accept access to the Owner's repo.
 
+
+> ## CLI Steps
+> [https://swcarpentry.github.io/git-novice/08-collab/](https://swcarpentry.github.io/git-novice/08-collab/)
+{: .solution}
+
+
 Next, the Collaborator needs to download a copy of the Owner's repository to her
 machine. This is called "cloning a repo". To clone the Owner's repo into
 her `Desktop` folder, the Collaborator clicks Clone Respository from the File
